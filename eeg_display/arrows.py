@@ -1,13 +1,27 @@
+# imports
 import pygame
 
 
 class arrow:
+    """Draws arrow images"""
+
     def __init__(self, path, x, y):
+        '''Initializes arrow
+
+        params
+            x: x location
+            y: y location
+        '''
         self.arrow = pygame.image.load(path)
         self.x = x
         self.y = y
 
     def load_arrow(self, screen):
+        '''Displays arrow
+
+        params
+            screen: screen to display on
+        '''
         screen.blit(self.arrow, (self.x, self.y))
 
 
