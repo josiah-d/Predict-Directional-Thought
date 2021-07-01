@@ -15,8 +15,8 @@ screen = pygame.display.set_mode((1600, 900))
 pygame.display.set_caption('Using an OpenBCI to Predict Directional Thought')
 
 # predictions and test data
-y_pred = np.random.choice(['l', 'n', 'r'], 100)
-y_test = np.random.choice(['l', 'n', 'r'], 100)
+y_pred = np.random.choice(['l', 'n', 'r'], 10000)
+y_test = np.random.choice(['l', 'n', 'r'], 10000)
 
 # score bar
 green_width = 0
