@@ -43,6 +43,7 @@ if __name__ == '__main__':
 
     # counter to index from y_pred and y_test
     counter = 0
+    counter_correct = 0
 
     # game loop
     while running:
@@ -73,9 +74,10 @@ if __name__ == '__main__':
 
         # adjust size of right wrong bar
         if counter < 1000:
-            if y_pred[counter] == y_test[counter]:
+            if y_pred[counter] != y_test[counter]:
                 green.increase_width()
                 red.decrease_width()
+                counter_correct += 1
             else:
                 green.decrease_width()
                 red.increase_width()
@@ -101,7 +103,14 @@ if __name__ == '__main__':
         # update counter
         counter += 1
 
+        # calc percent correct
+        perc_correct = counter_correct / counter
+
+        # conver old percentage
+        pygame.draw.rect(screen, (0, 0, 0),
+                         (1300, 80, 300, 100))
         # add text
+        show_text(f'{str(round(perc_correct*100, 2))}%', 1300, 80)
         show_text('y_test', 50, 225)
         show_text('y_pred', 50, 550)
 

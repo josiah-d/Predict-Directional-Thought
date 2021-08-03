@@ -31,17 +31,22 @@ class bar:
         elif self.width <= 5:
             self.width = 5
 
+    '''
+    /**
+    * todo: rework `increase_width` and `decrease_width` to scale by the percentage right or wrong
+    **/
+    '''
+
     def increase_width(self):
         '''Increase the width of the bar
 
         For example, if the prediction is correct, the green bar increases by 5
         and the red bar decreases by 5
         '''
-        self.check_width()
-        self.check_left()
-        self.width += 5
+        self.check_width_left()
+        self.width += 15
         if self.red:
-            self.left -= 5
+            self.left -= 15
 
     def decrease_width(self):
         '''Decrease the width of the bar
@@ -49,11 +54,10 @@ class bar:
         For example, if the prediction is incorrect, the green bar decreases by 5
         and the red bar increases by 5
         '''
-        self.check_width()
-        self.check_left()
-        self.width -= 5
+        self.check_width_left()
+        self.width -= 15
         if self.red:
-            self.left += 5
+            self.left += 15
 
     def draw_rect(self):
         '''Displays the rectangle on the screen'''
