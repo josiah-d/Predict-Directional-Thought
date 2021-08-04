@@ -1,1 +1,5 @@
 data/
+img/animate/
+img/.DS_Store
+notebooks/.ipynb_checkpoints/
+
