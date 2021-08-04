@@ -1,4 +1,4 @@
-# Using an OpenBCI to Predict Directional Thought
+# Using OpenBCI to Predict Directional Thought
 
 ## Data
 
