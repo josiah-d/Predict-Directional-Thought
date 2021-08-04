@@ -3,24 +3,46 @@ import pygame
 
 
 class arrow:
-    """Draws arrow images"""
+    '''
+    draws arrow images
+    '''
 
     def __init__(self, path, x, y):
-        '''Initializes arrow
+        '''
+        initializes arrow
 
         params
-            x: x location
-            y: y location
+        ======
+        x (int): x location
+        y (int): y location
+
+        attrs
+        =====
+        arrow (pygame.image): arrow to be displayed
+
+        returns
+        =======
+        none
         '''
         self.arrow = pygame.image.load(path)
         self.x = x
         self.y = y
 
     def load_arrow(self, screen):
-        '''Displays arrow
+        '''
+        displays arrow
 
         params
-            screen: screen to display on
+        ======
+        screen (pygame.screen): screen to display on
+
+        attrs
+        =====
+        none
+
+        returns
+        =======
+        none
         '''
         screen.blit(self.arrow, (self.x, self.y))
 

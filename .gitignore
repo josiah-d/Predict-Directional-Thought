@@ -2,4 +2,9 @@ data/
 img/animate/
 img/.DS_Store
 notebooks/.ipynb_checkpoints/
+src/__pycache__/
+eeg_display/src/__pycache__/
+
+
+
 

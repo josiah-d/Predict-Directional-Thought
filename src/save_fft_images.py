@@ -19,7 +19,24 @@ data = np.load(path)
 
 
 def save_images(data):
-    '''iterate through observations and save as images'''
+    '''
+    iterate through observations and save as images
+
+    params
+    ======
+    data (np.ndarray): 3d array
+        [0, :, :] time series samped at 25 Hz (~10 seconds)
+        [:, 0, :] sensors (16 total)
+        [:, :, 0] µV data from different Hz (1 Hz - 60 Hz)
+
+    attrs
+    =====
+    none
+
+    returns
+    =======
+    none
+    '''
     for i in range(len(data)):
         fig, ax = plt.subplots(figsize=(16, 9))
         for channel in data[i]:

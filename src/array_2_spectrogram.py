@@ -29,6 +29,22 @@ paths = [train_left, train_none, train_right,
 
 
 def make_spectro(in_path, out_path):
+    '''
+    creates spectrograms from FFT EEG data
+
+    params
+    ======
+    in_path (str): file path to numpy array data
+    out_path (str): file path to save image
+
+    attrs
+    =====
+    none
+
+    returns
+    =======
+    none
+    '''
     # load data
     data = np.load(in_path)
 
@@ -46,6 +62,21 @@ def make_spectro(in_path, out_path):
 
 
 def silly_crop(path):
+    '''
+    crops image to remove whitespace or alpha layer
+
+    params
+    ======
+    path (str): file path to load and save the image
+
+    attrs
+    =====
+    none
+
+    returns
+    =======
+    none
+    '''
     # load image
     im = Image.open(path)
 
@@ -62,7 +93,21 @@ def silly_crop(path):
 
 
 def make_image_path(path):
-    # path_list = path.split('/')
+    '''
+    creates the image path from the data path
+
+    params
+    ======
+    path (str): file path to numpy array data
+
+    attrs
+    =====
+    none
+
+    returns
+    =======
+    new_path (str): file path to save the image
+    '''
     new_path = 'img/' + path.split('.')[0] + '.png'
 
     return new_path

@@ -13,28 +13,42 @@ test_paths = ['data/test/left/*.npy',
 
 
 def shape_retriever(path):
-    """Obtain the shape of each numpy.ndarray
+    '''
+    Obtain the shape of each numpy.ndarray
 
     params
-        path: relative file path
+    ======
+    path (str): relative file path
+
+    attrs
+    =====
+    none
 
     returns
-        shape: tuple containing array shape
-    """
+    =======
+    shape (tuple): containing array shape
+    '''
     arr = np.load(path)
     return arr.shape
 
 
 def observ_data_number(paths):
-    """Obtain the number of observations and datapoints
+    '''
+    Obtain the number of observations and datapoints
 
     params
-        paths: array of file paths
+    ======
+    paths (list): file paths
+
+    attrs
+    =====
+    none
 
     returns
-        observations: number of observations
-        data_points: number of data points
-    """
+    =======
+    observations (int): number of observations
+    data_points (int): number of data points
+    '''
     observations = 0
     data_points = 0
 

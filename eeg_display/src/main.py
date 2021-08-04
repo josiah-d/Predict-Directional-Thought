@@ -32,7 +32,23 @@ font = pygame.font.Font('freesansbold.ttf', 64)
 
 
 def show_text(txt, x, y):
-    '''Display text'''
+    '''
+    displays text
+
+    params
+    ======
+    txt (str): text to display
+    x (int): x location
+    y (int): y location
+
+    attrs
+    =====
+    none
+
+    returns
+    =======
+    none
+    '''
     text = font.render(txt, False, (255, 255, 255))
     screen.blit(text, (x, y))
 
