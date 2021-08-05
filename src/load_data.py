@@ -4,6 +4,9 @@ import os
 import numpy as np
 
 # set directories to get data from
+# train_dir = 'data/train'
+# test_dir = 'data/test'
+
 train_dir = '../data/train'
 test_dir = '../data/test'
 
@@ -157,7 +160,10 @@ def master_load():
     X_train, y_train = split_data(train)
     X_test, y_test = split_data(test)
 
-    return X_train, X_test, y_train, y_test
+    return (np.array(X_train),
+            np.array(X_test),
+            np.array(y_train),
+            np.array(y_test))
 
 
 if __name__ == '__main__':
