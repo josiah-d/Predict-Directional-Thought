@@ -14,30 +14,29 @@ test_dir = '../data/test'  # notebooks
 actions = ['left', 'right', 'none']
 
 
-def shuffle(data_dct):
-    '''
-    shuffle the data to prevent overfitting 
+# def shuffle(data_dct):
+#     '''
+#     shuffle the data to prevent overfitting
 
-    params
-    ======
-    data_dct (dict): FFT EEG data keys are labeled targets, values are the
-        features
+#     params
+#     ======
+#     data_dct (dict): FFT EEG data keys are labeled targets, values are the
+#         features
 
-    attrs
-    =====
-    none
+#     attrs
+#     =====
+#     none
 
-    returns
-    =======
-    data_dct (dict): FFT EEG data keys are labeled targets, values are the
-        features
-    '''
-    lengths = [len(data_dct[action]) for action in actions]
-    for action in actions:
-        np.random.shuffle(data_dct[action])
-        data_dct[action] = data_dct[action][:min(lengths)]
+#     returns
+#     =======
+#     data_dct (dict): FFT EEG data keys are labeled targets, values are the
+#         features
+#     '''
+#     lengths = [len(data_dct[action]) for action in actions]
+#     for action in actions:
+#         shuffled = np.random.shuffle(data_dct[action][:min(lengths)])
 
-    return data_dct
+#     return shuffled
 
 
 def load_data(actions, data_dir):
@@ -70,7 +69,7 @@ def load_data(actions, data_dir):
             for datum in data:
                 data_dct[action].append(datum)
 
-    return shuffle(data_dct)
+    return data_dct
 
 
 def combine_data(data_dct):
@@ -101,8 +100,6 @@ def combine_data(data_dct):
                 combined_data.append([data, [0, 0, 1]])
             elif action == "none":
                 combined_data.append([data, [0, 1, 0]])
-
-    np.random.shuffle(combined_data)
 
     return combined_data
 
