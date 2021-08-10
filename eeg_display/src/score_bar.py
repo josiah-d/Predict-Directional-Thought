@@ -5,17 +5,18 @@ import pygame
 class bar:
     '''Creates a bar to track the right and wrong predictions'''
 
-    def __init__(self, screen, color, left, width=750, red=False):
+    def __init__(self, screen, color, left, top, width=750, red=False):
         '''
-        initialie bar
+        initialize bar
 
         params
         ======
         screen(pygame.screen): screen to display on
-        width(int): sets the width of the bar
-        color(list): RGB for the color of the bar
-        left(int): set the x location
-        red(bool): control logic if the bar is for the errant predicitons
+        width (int): sets the width of the bar
+        color (list): RGB for the color of the bar
+        left (int): set the x location
+        top (int): set the y location
+        red (bool): control logic if the bar is for the errant predicitons
 
         attrs
         =====
@@ -26,18 +27,19 @@ class bar:
         none
         '''
         self.screen = screen
-        self.width = width
         self.color = color
         self.left = left
+        self.top = top
+        self.width = width
         self.red = red
 
-    def check_width_left(self):
+    def adjust_width(self, percent_right):
         '''
-        ensures proper display to ensure the bar remains with the bounds
+        adjust the width of the bar, scales on percentage of correct predictions
 
         params
         ======
-        none
+        percent_right (float): percentage of correct predictions
 
         attrs
         =====
@@ -47,66 +49,8 @@ class bar:
         =======
         none
         '''
-        if self.left <= 55 and self.red:
-            self.left = 55
-        if self.width >= 1495:
-            self.width = 1495
-        elif self.width <= 5:
-            self.width = 5
-
-    '''
-    /**
-    * todo: rework `increase_width` and `decrease_width` to scale by the percentage right or wrong
-    **/
-    '''
-
-    def increase_width(self):
-        '''
-        increase the width of the bar
-
-        for example, if the prediction is correct, the green bar increases by 5
-        and the red bar decreases by 5
-
-        params
-        ======
-        none
-
-        attrs
-        =====
-        none
-
-        returns
-        =======
-        none
-        '''
-        self.check_width_left()
-        self.width += 15
-        if self.red:
-            self.left -= 15
-
-    def decrease_width(self):
-        '''
-        decrease the width of the bar
-
-        for example, if the prediction is incorrect, the green bar decreases by 5
-        and the red bar increases by 5
-
-        params
-        ======
-        none
-
-        attrs
-        =====
-        none
-
-        returns
-        =======
-        none
-        '''
-        self.check_width_left()
-        self.width -= 15
-        if self.red:
-            self.left += 15
+        if not self.red:
+            self.width = int((percent_right) * 1500)
 
     def draw_rect(self):
         '''
@@ -123,6 +67,8 @@ class bar:
         returns
         =======
         none
+
+        Rect(left, top, width, height) -> Rect
         '''
         pygame.draw.rect(self.screen, self.color,
-                         (self.left, 50, self.width, 10))
+                         (self.left, self.top, self.width, 10))

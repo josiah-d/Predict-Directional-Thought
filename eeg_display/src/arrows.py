@@ -68,3 +68,6 @@ right_off = arrow('../img/off/right.png', 1044, 450)
 left_small_off = arrow('../img/off/left0.5.png', 364, 194)
 none_small_off = arrow('../img/off/none0.5.png', 736, 194)
 right_small_off = arrow('../img/off/right0.5.png', 1108, 194)
+
+# pointer
+pointer = arrow('../img/pointer.png', 518, 70)
