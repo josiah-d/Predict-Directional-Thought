@@ -112,13 +112,8 @@ Random chance was used as a basline. There is a 1/3 probability that the correct
 
 ![conf matrix](img/conf_matrix.png)
 
-<<<<<<< HEAD
-=======
-![ui](img/eeg_display.mp4)
-
 https://user-images.githubusercontent.com/33579895/129062312-2243972c-53f9-442e-8fbe-62ffbb030c51.mp4
 
->>>>>>> daac18278b97b469d690f0a7dbb9f1954aa776a1
 ---
 
 ## Conclusions
