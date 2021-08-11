@@ -120,6 +120,10 @@ https://user-images.githubusercontent.com/33579895/129062312-2243972c-53f9-442e-
 
 ## Conclusions
 
+The human brain is massively complicated. There are gross individual and local variations. From day to day, hour to hour, the brain is changing. It is not a static organ. Variation in one's brain waves can be caused by different food, levels of fatigue, environmental changes, etc. These variations makes this project excessively challenging.
+
+However, there is some signal that can be gleaned from non-invasive EEGs. There is a lot more work that is needed to bring this project to production, but this is a decent start.
+
 ---
 
 ## Next Steps
