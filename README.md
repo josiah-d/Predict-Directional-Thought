@@ -79,8 +79,8 @@ Spectrograms were created from the FFT data as an alternative means of feeding t
 
 Left & Right
 
-![spectrogram left](img/data/test/left/1573485854.png)
-![spectrogram right](img/data/test/right/1573516310.png)
+![spectrogram left](img/1573487104.png)
+![spectrogram right](img/1573485854.png)
 
 ---
 
@@ -112,7 +112,7 @@ Random chance was used as a basline. There is a 1/3 probability that the correct
 
 ![conf matrix](img/conf_matrix.png)
 
-![ui](img/animate/eeg_display.mp4)
+![ui](img/eeg_display.mp4)
 
 ---
 
