@@ -75,7 +75,7 @@ There are notable differences that can be visually identified. The following plo
 
 This plot was used to identify which sensors have the greatest variation between the `left`, `none`, and `right` thoughts. Sensors 7 & 15 appeared to contain the greatest amount of signal and were later isolated to train models.
 
-![by sensor all obs & sensors](img/mean_µv_by_sensor_all_observations_&_sensors.png)
+![by sensor all obs & sensors](img/mean_µv_by_sensor_all_observations_&_sensors_simple.png)
 
 Spectrograms were created from the FFT data as an alternative means of feeding the data into various models. Each of the sensors are the major subdivisions seen across the y axis with the time series data across the x axis and the color being the strength of the µV reading.
 
