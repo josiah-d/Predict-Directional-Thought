@@ -114,6 +114,8 @@ Random chance was used as a basline. There is a 1/3 probability that the correct
 
 ![ui](img/eeg_display.mp4)
 
+https://user-images.githubusercontent.com/33579895/129062312-2243972c-53f9-442e-8fbe-62ffbb030c51.mp4
+
 ---
 
 ## Conclusions
