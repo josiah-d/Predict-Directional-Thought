@@ -61,6 +61,8 @@ The [data](https://hkinsley.com/static/downloads/bci/model_data_v2.7z) was obtai
 
 The EEG sampled at 25 Hz across all 16 sensors and the raw data was passed through the fast fourier transform (FFT) algorithm. There are 60 discrete Hz ranges with each having a microvoltage (µV) reading.
 
+https://user-images.githubusercontent.com/33579895/129062975-42bd0d11-65db-4dcd-b358-5ca0ba9c4e44.mp4
+
 ---
 
 ## Data Visualization
