@@ -4,11 +4,11 @@ import os
 import numpy as np
 
 # set directories to get data from
-# train_dir = 'data/train'  # scripts
-# test_dir = 'data/test'  # scripts
+train_dir = 'data/train'  # scripts
+test_dir = 'data/test'  # scripts
 
-train_dir = '../data/train'  # notebooks
-test_dir = '../data/test'  # notebooks
+# train_dir = '../data/train'  # notebooks
+# test_dir = '../data/test'  # notebooks
 
 # establish labels for the differing thoughts
 actions = ['left', 'right', 'none']
@@ -165,6 +165,3 @@ def master_load():
 
 if __name__ == '__main__':
     X_train, X_test, y_train, y_test = master_load()
-
-
-print('test')

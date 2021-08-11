@@ -61,14 +61,15 @@ def observ_data_number(paths):
     return observations, data_points
 
 
-# compute number of observation or datapoints
-train_observations, train_data_points = observ_data_number(train_paths)
-print('train')
-print(f'observations: {train_observations}, datapoints: {train_data_points}')
+if __name__ == '__main__':
+    # compute number of observation or datapoints
+    train_observations, train_data_points = observ_data_number(train_paths)
+    print('train')
+    print(f'observations: {train_observations}, datapoints: {train_data_points}')
 
-test_observations, test_data_points = observ_data_number(test_paths)
-print('test')
-print(f'observations: {test_observations}, datapoints: {test_data_points}')
+    test_observations, test_data_points = observ_data_number(test_paths)
+    print('test')
+    print(f'observations: {test_observations}, datapoints: {test_data_points}')
 
 
 '''

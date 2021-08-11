@@ -10,7 +10,7 @@ from load_data import master_load
 X_train, X_test, y_train, y_test = master_load()
 
 # get best model
-best_numpy_model = sorted(glob('../models/numpy/*.model'))[-1]
+best_numpy_model = sorted(glob('models/numpy/*.model'))[-1]
 model_numpy = load_model(best_numpy_model)
 
 # make predictions and reformat test data
@@ -25,4 +25,4 @@ df.drop('index', axis=1, inplace=True)
 
 if __name__ == '__main__':
     # save results
-    df.to_csv('../data/best_model_results.csv')
+    df.to_csv('best_model_results.csv')
