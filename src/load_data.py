@@ -165,3 +165,6 @@ def master_load():
 
 if __name__ == '__main__':
     X_train, X_test, y_train, y_test = master_load()
+
+
+print('test')
