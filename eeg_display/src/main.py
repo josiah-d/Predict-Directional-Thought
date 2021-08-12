@@ -62,8 +62,8 @@ if __name__ == '__main__':
     # game loop
     while running:
         # pause to give time to start a recording
-        if counter == 0:
-            time.sleep(15)
+        # if counter == 0:
+        #     time.sleep(15)
 
         # display arrows
         arrows.left_off.load_arrow(screen)
